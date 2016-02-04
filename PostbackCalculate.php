@@ -1,4 +1,38 @@
 <?php
+
+
+/**
+ * PostbackCalculate.php gets the info from the form and it does the math for the program 
+ *
+ * @package NewmanTacoTruck
+ * @author Turner Tackitt, Souha, Alec <you@example.com>
+ * @version 1.0 2016/02/02 
+ * @link http://itc250.denryu.net/ITC250-W16-GrpProj2/
+ * @see index.php
+ * @see MenuEntry.php
+ * @todo none
+ */
+
+
+
+
+
+/**
+   * Gets quanties and adds up to get total
+   *
+   * 
+   *
+   * <code>
+   * $output = calculatePostback(&$order, &$total); Not sure about this?
+   * </code>
+   *
+   * @param  string $order The order of the client 
+   * @param float $total The total of the client's order
+   * @return boolean  Test if the form is validated or not 
+   * @todo none
+   */
+
+
 function calculatePostback(&$order, &$total)
 {
     global $foodOptions;

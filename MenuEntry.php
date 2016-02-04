@@ -1,4 +1,7 @@
 <?php
+
+
+
 /*
  * MenuEntry.php
  * Newman Catering PoS App
@@ -7,7 +10,11 @@
  * Fields
  *    $InternalName (string) - the internal name of the item (this will be saved to receipts, used for POSTs, and otherwise refer to this item)
  *  $DisplayName (string)  - the name of the item as it will be shown to the user
+ *  $Description (string)  - the description of the item
  *  $ItemPrice   (float)   - the price of this item
+ *<code>
+ *myClass=new MenuEntry("internal_name1","name1","description1","price1")
+ *</code> 
  */
 class MenuEntry
 {
@@ -17,6 +24,21 @@ class MenuEntry
     public $ItemPrice;
     public $ErrorMsg;
     
+     /**
+   * creates construtor
+   *
+   * 
+   *
+   * <code>
+   * construct($internalName, $displayName, $description, $itemPrice)  
+   * </code>
+   *
+   * @param string $InternalName  the internal name of the item (this will be saved to receipts, used for POSTs, and otherwise refer to this item)
+   *@param string $DisplayName  the name of the item as it will be shown to the user
+   *@param string $Description the description of the item
+   *@param float $ItemPrice  the price of this item
+   * @todo none
+   */
     function __construct($internalName, $displayName, $description, $itemPrice)
     {
         $this->InternalName = $internalName;
@@ -29,6 +51,26 @@ class MenuEntry
     /**
     
     */
+    
+
+    /**
+   * creaetes checkboxes for desiered numbers
+   *
+   * 
+   *
+   * <code>
+   * $output = createCheckboxHtml($checkboxGroupName) 
+   * </code>
+   *
+   * @param string $checkboxGroup  //I dont know what it does
+   * @return check boxes  
+   * @todo none
+   */
+
+
+
+
+
     public function createCheckboxHtml($checkboxGroupName)
     {
         // Example output is
