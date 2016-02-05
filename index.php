@@ -1,13 +1,19 @@
 <?php
+/**
+ * index.php - postback form for both choosing menu items and displaying the total price for said items
+ *
+ * @package NewmanTacoTruck
+ * @author Turner Tackitt, Souha, Alec
+ * @version 1.0 2016/02/02 
+ * @link http://itc250.denryu.net/ITC250-W16-GrpProj2/
+ * @see PostbackCalculate.php
+ * @see MenuEntry.php
+ * @todo none
+ */
+
+
 include("MenuEntry.php");
 include("PostbackCalculate.php");
-
-/*
- * index.php
- * Newman Catering PoS App
- * Main Page - postback form for both choosing menu items and displaying the total price for said items
- *
- */
 
 $foodOptions[] = new MenuEntry("burrito","Burrito", "Mildly Spicy Burrito", 7.95);
 $foodOptions[] = new MenuEntry("tacos","Tacos", "Run of the mill Tacos; we recommend this with Carne Asada", 2.20);

@@ -1,20 +1,26 @@
 <?php
-
+/**
+ * MenuEntry.php - contains data about a single menu item in the food truck
+ *
+ * @package NewmanTacoTruck
+ * @author Turner Tackitt, Souha, Alec
+ * @version 1.0 2016/02/02 
+ * @link http://itc250.denryu.net/ITC250-W16-GrpProj2/
+ * @see PostbackCalculate.php
+ * @see index.php
+ * @todo none
+ */
 
 
 /*
- * MenuEntry.php
- * Newman Catering PoS App
- * Class MenuEntry - contains data about a single menu item in food truck
- *
- * Fields
- *    $InternalName (string) - the internal name of the item (this will be saved to receipts, used for POSTs, and otherwise refer to this item)
- *  $DisplayName (string)  - the name of the item as it will be shown to the user
- *  $Description (string)  - the description of the item
- *  $ItemPrice   (float)   - the price of this item
- *<code>
- *myClass=new MenuEntry("internal_name1","name1","description1","price1")
- *</code> 
+ * contains data about a single menu item in the food truck
+ *  @var $InternalName (string) - the internal name of the item (this will be saved to receipts, used for POSTs, and otherwise refer to this item)
+ *  @var $DisplayName (string)  - the name of the item as it will be shown to the user
+ *  @var $Description (string)  - the description of the item
+ *  @var $ItemPrice   (float)   - the price of this item
+ *  <code>
+ *  $itemOnMenu=new MenuEntry("internal_name1","name1","description1","price1")
+ *  </code> 
  */
 class MenuEntry
 {
@@ -30,7 +36,7 @@ class MenuEntry
    * 
    *
    * <code>
-   * construct($internalName, $displayName, $description, $itemPrice)  
+   * new MenuEntry($internalName, $displayName, $description, $itemPrice)  
    * </code>
    *
    * @param string $InternalName  the internal name of the item (this will be saved to receipts, used for POSTs, and otherwise refer to this item)
@@ -54,28 +60,23 @@ class MenuEntry
     
 
     /**
-   * creaetes checkboxes for desiered numbers
-   *
-   * 
+   * creates checkboxes for desired numbers
+   * Example Output is:
+   *	<input type="checkbox" name="bunchOfBoxes" value="sample" />Sample Item! ($5)
+   *	<input type="select" name="sampleQuantity">[..items..]</select><span class="error"></span><div style="padding-left: 50px;">Description</div><br />
    *
    * <code>
-   * $output = createCheckboxHtml($checkboxGroupName) 
+   * echo $menuItem->createCheckboxHtml() 
    * </code>
    *
-   * @param string $checkboxGroup  //I dont know what it does
-   * @return check boxes  
+   * @return generated HTML for checkboxes
    * @todo none
    */
-
-
-
-
-
-    public function createCheckboxHtml($checkboxGroupName)
+    public function createCheckboxHtml()
     {
         // Example output is
-        // <input type="checkbox" name="bunchOfBoxes" value="sample" />Sample Item! ($5)
-        // <input type="text" name="sampleQuantity" placeholder="Quantity"/><br />
+        // 
+        // 
         //
         // Name of Quantity Box is derived from $internalName (eg, internal name for item is "sample", so input is "sampleQuantity"
         // sprintf($format, $arg1, ..., $argN) replaces format strings (%s, %d, %f, etc) with the arguments supplied.
@@ -91,7 +92,7 @@ class MenuEntry
         <span class="error">%5$s</span>
         <div style="padding-left: 50px;">%6$s</div>
         <br />',
-        $checkboxGroupName, $this->InternalName, $this->DisplayName, $this->ItemPrice, $this->ErrorMsg, $this->Description);
+        null, $this->InternalName, $this->DisplayName, $this->ItemPrice, $this->ErrorMsg, $this->Description);
 
 
     }
