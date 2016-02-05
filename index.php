@@ -46,7 +46,7 @@ $OrderAnyItems = false;
                 // print out the menu items that make up the order form
                 foreach($foodOptions as $menuItem)
                 {
-                    echo $menuItem->createCheckboxHtml("food");
+                    echo $menuItem->createCheckboxHtml();
                 }
             ?>
             <input type = "submit" name = "purchaseFood" onclick="validateForm()"/>
