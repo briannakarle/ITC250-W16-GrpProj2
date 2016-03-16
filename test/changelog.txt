@@ -1,0 +1,34 @@
+Updated 6/2/2015
+
+Bill Newman for ITC260
+
+The zip file contains PHP unit test examples and in a sub-folder named simpletest, the 
+software SimpleTest (http://www.simpletest.org/).
+
+Installation:
+
+Upload all into a sub-folder on your PHP server space.
+
+Try out the test files in the root folder in approximately this order:
+
+calculator_test1.php
+calculator_test2.php
+calculator_test3.php
+contact_test1.php
+contact_test2.php
+password_form_test.php
+
+There are also files that run more than one test:
+
+suite.php
+run_all.php
+
+View how the files work via a browser then view them internally to see 
+how they are put together.
+
+For more, visit:
+
+http://www.simpletest.org/en/first_test_tutorial.html
+
+http://www.simpletest.org/en/unit_test_documentation.html
+
